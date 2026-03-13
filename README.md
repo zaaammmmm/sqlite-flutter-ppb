@@ -1,2 +1,3 @@
-# sqlite-flutter-ppb
-Praktikum SQLite Flutter | Pemrograman Platform Bergerak
+# sqlite
+
+A new Flutter project.
