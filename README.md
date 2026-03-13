@@ -1,3 +1,2 @@
 # sqlite
-
-A new Flutter project.
+Menyimpan Data Lokal Menggunakan SQLite di Flutter
