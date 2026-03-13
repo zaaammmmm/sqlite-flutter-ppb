@@ -76,7 +76,10 @@ class _MahasiswaPageState extends State<MahasiswaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Daftar Mahasiswa")),
+      appBar: AppBar(
+        title: const Text("Daftar Mahasiswa"),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
