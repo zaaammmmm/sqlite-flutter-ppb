@@ -4,6 +4,8 @@ import '../models/mahasiswa.dart';
 import 'dart:async';
 
 class MahasiswaPage extends StatefulWidget {
+  const MahasiswaPage({super.key});
+
   @override
   State<MahasiswaPage> createState() => _MahasiswaPageState();
 }
@@ -74,26 +76,27 @@ class _MahasiswaPageState extends State<MahasiswaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Daftar Mahasiswa")),
+      appBar: AppBar(title: const Text("Daftar Mahasiswa")),
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             TextField(
               controller: namaController,
-              decoration: InputDecoration(labelText: "Nama"),
+              decoration: const InputDecoration(labelText: "Nama"),
             ),
             TextField(
               controller: nimController,
-              decoration: InputDecoration(labelText: "NIM"),
+              decoration: const InputDecoration(labelText: "NIM"),
             ),
             TextField(
               controller: jurusanController,
-              decoration: InputDecoration(labelText: "Jurusan"),
+              decoration: const InputDecoration(labelText: "Jurusan"),
             ),
-            SizedBox(height: 10),
-            ElevatedButton(onPressed: simpanMahasiswa, child: Text("Simpan")),
-            SizedBox(height: 20),
+            const SizedBox(height: 10),
+            ElevatedButton(
+                onPressed: simpanMahasiswa, child: const Text("Simpan")),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
                 itemCount: data.length,
@@ -107,11 +110,11 @@ class _MahasiswaPageState extends State<MahasiswaPage> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.edit),
+                          icon: const Icon(Icons.edit),
                           onPressed: () => editMahasiswa(mhs),
                         ),
                         IconButton(
-                          icon: Icon(Icons.delete),
+                          icon: const Icon(Icons.delete),
                           onPressed: () => hapusMahasiswa(mhs.id!),
                         ),
                       ],
